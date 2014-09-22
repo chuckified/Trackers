@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogTracker", "LogTracker\LogTracker.csproj", "{541DF776-9C41-4751-B625-55C958A11468}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogTracker.DataAccess", "LogTracker.DataAccess\LogTracker.DataAccess.csproj", "{715D0177-930F-4280-9437-1DF447F6943E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogTracker.Test.Unit", "LogTracker.Test.Unit\LogTracker.Test.Unit.csproj", "{B19C98F6-9F64-45FA-94AA-A204913F7020}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{541DF776-9C41-4751-B625-55C958A11468}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{541DF776-9C41-4751-B625-55C958A11468}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{541DF776-9C41-4751-B625-55C958A11468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{715D0177-930F-4280-9437-1DF447F6943E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{715D0177-930F-4280-9437-1DF447F6943E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{715D0177-930F-4280-9437-1DF447F6943E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{715D0177-930F-4280-9437-1DF447F6943E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B19C98F6-9F64-45FA-94AA-A204913F7020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B19C98F6-9F64-45FA-94AA-A204913F7020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B19C98F6-9F64-45FA-94AA-A204913F7020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B19C98F6-9F64-45FA-94AA-A204913F7020}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
