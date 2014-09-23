@@ -1,18 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
+using LogTracker.DataAccess;
+using LogTracker.DataAccess.Domain;
+using NHibernate;
 
 namespace LogTracker.Controllers
 {
     public class LogTrackerController : ApiController
     {
+        private static readonly ISessionFactory Session = NHibernateSessionFactory.CreateSessionFactory("LogTracker-DB");
+        private readonly LogTrackerDataAccess _logTrackerDataAccess = new LogTrackerDataAccess(Session);
+
         // GET api/logtracker
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            var user = new User {FirstName = "Test1", LastName = "Liu", LoginName = "Dliu"};
+            _logTrackerDataAccess.CreateUser(user);
+            return new[] { "value1", "value2" };
         }
 
         // GET api/logtracker/5
