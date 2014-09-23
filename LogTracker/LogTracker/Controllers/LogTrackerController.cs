@@ -14,9 +14,8 @@ namespace LogTracker.Controllers
         // GET api/logtracker
         public IEnumerable<string> Get()
         {
-            var user = new User {FirstName = "Test1", LastName = "Liu", LoginName = "Dliu"};
-            _logTrackerDataAccess.CreateUser(user);
-            return new[] { "value1", "value2" };
+            var user = _logTrackerDataAccess.GetUser("Dliu");
+            return new[] { user.LastName, user.FirstName };
         }
 
         // GET api/logtracker/5
@@ -28,6 +27,8 @@ namespace LogTracker.Controllers
         // POST api/logtracker
         public void Post([FromBody]string value)
         {
+            var user = new User { FirstName = "Test1", LastName = "Liu", LoginName = "Dliu" };
+            _logTrackerDataAccess.CreateUser(user);
         }
 
         // PUT api/logtracker/5

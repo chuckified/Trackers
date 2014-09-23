@@ -63,7 +63,7 @@ namespace LogTracker.DataAccess
         {
             var schemaExport = new SchemaExport(configuration);
             schemaExport.SetOutputFile(SchemaOutputPath);
-            schemaExport.Execute(false, true, false);
+            schemaExport.Execute(false, false, false);
         }
     }
 }

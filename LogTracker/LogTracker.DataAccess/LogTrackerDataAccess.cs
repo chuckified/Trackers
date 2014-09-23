@@ -1,5 +1,7 @@
-﻿using LogTracker.DataAccess.Domain;
+﻿using System.Linq;
+using LogTracker.DataAccess.Domain;
 using NHibernate;
+using NHibernate.Criterion;
 
 namespace LogTracker.DataAccess
 {
@@ -20,6 +22,17 @@ namespace LogTracker.DataAccess
                     session.Save(user);
                     return user.Id;
                 });
+        }
+
+        public User GetUser(string loginName)
+        {
+            return _helper.Execute(
+                session =>
+                    session.CreateCriteria<User>()
+                        .Add(Restrictions.Eq("LoginName", loginName))
+                        .List<User>()
+                        .FirstOrDefault()
+                );
         }
     }
 }
