@@ -49,10 +49,11 @@
 <script type="text/javascript">
     $('#getuser').click(function () {
         $.ajax({
-            url: '/api/logtracker',
+            url: 'http://www.4jeffreylucy.com/api/logtracker',
             type: 'GET',
             dataType: 'json',
-            data: { },
+            data: {},
+            crossDomain: true,
             success: function (data) {
                 $('#result').text(data);
             },

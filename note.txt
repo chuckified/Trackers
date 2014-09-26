@@ -1,0 +1,7 @@
+database: LogTracker
+db username: dennis
+pwd: Dennis123
+
+
+<add name="LogTracker-DB" connectionString="Data Source=(local);Initial Catalog=LogTracker;Integrated Security=True;" />
+<add name="LogTracker-DB" connectionString="Data Source=184.168.194.70;User Id=dennis;Password=Dennis123;Initial Catalog=LogTracker"/>
